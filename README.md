@@ -128,3 +128,30 @@ public class Employee extends member{
 ~~~
 ### OUTPUT:
 ![image](https://user-images.githubusercontent.com/93427264/226090254-9df10bd8-e285-4f19-a21e-81242bfee6e3.png)
+
+### 4.Define a method to calculate power of a number raised to other i.e. ab using recursion where the numbers 'a' and 'b' are to be entered by the user
+### CODE:
+~~~
+package q4;
+import java.util.Scanner;
+public class Main {
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int result=power(a,b);
+        System.out.println("Ans: "+result);
+    }
+    public static int power(int a,int b){
+        if(b>0) {
+            return a * power(a, b-1);
+        }
+        else{
+            return 1;
+        }
+    }
+}
+
+~~~
+### OUTPUT:
+![image](https://user-images.githubusercontent.com/93427264/226099195-e930f66f-8e71-4b39-8e2d-10c1c92b31a5.png)
